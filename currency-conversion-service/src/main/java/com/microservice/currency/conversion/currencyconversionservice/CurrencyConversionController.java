@@ -42,6 +42,7 @@ public class CurrencyConversionController {
     @GetMapping("/currency-converter-feign/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversionData convertCurrencyFeign(@PathVariable String from, @PathVariable String to,
                                                        @PathVariable BigDecimal quantity) {
+        logger.info("Currency conversion using Feign ============================ ");
         CurrencyConversionData response = exchangeRateServiceProxy.retrieveExchangeValue(from, to);
         logger.info("{}", response);
         return new CurrencyConversionData(response.getId(), from, to, response.getConversionMultiple(), quantity,
