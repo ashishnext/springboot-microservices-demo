@@ -33,7 +33,7 @@ dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-eureka')
 	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
 	compile('org.springframework.cloud:spring-cloud-starter-feign')
-	compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+//	compile('org.springframework.cloud:spring-cloud-starter-ribbon')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
